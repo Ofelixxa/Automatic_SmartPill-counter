@@ -88,3 +88,10 @@ private val URL_ESP32_CAPTURA = "http://YOUR.ESP32.IP.ADDRESS/captura"
 
 Contributions, issues, and feature requests are welcome! 
 
+
+
+https://github.com/user-attachments/assets/292b9581-0e94-46ae-aa8b-847e1178b55f
+
+
+
+
