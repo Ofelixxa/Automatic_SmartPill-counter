@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F2F7">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNav">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#1C1C1E"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Hola"
+                    android:textColor="#FFFFFF"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tus recordatorios de hoy"
+                    android:textColor="#8E8E93"
+                    android:textSize="14sp"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PRÓXIMA TOMA"
+                android:textSize="12sp"
+                android:textColor="#8E8E93"
+                android:textStyle="bold"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="8dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:background="@drawable/borde_izquierdo_verde">
+
+                    <TextView
+                        android:id="@+id/txtProximaNombre"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="No hay alarmas"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="#1C1C1E" />
+
+                    <TextView
+                        android:id="@+id/txtProximaHora"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="--:--"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        android:textColor="#34C759"
+                        android:layout_marginTop="4dp" />
+
+                    <TextView
+                        android:id="@+id/txtProximaDosis"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Programa tu medicamento abajo"
+                        android:textColor="#8E8E93"
+                        android:layout_marginTop="2dp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PROGRAMAR NUEVA ALARMA"
+                android:textSize="12sp"
+                android:textColor="#8E8E93"
+                android:textStyle="bold"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="24dp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="8dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="#FFFFFF"
+                app:strokeColor="#D1D1D6"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Medicamento:"
+                        android:textSize="14sp"
+                        android:textColor="#020203" />
+
+                    <Spinner
+                        android:id="@+id/spinnerMedicamentoAlarma"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="4dp"
+                        android:textColor="#0d0c0c"
+                        android:background="#FAFAFA" />
+
+                    <Button
+                        android:id="@+id/btnSeleccionarHora"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Seleccionar Hora (00:00)"
+                        android:layout_marginTop="12dp"
+                        style="?attr/materialButtonOutlinedStyle"
+                        app:strokeColor="#5E5CE6"
+                        android:textColor="#5E5CE6" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cantidad de pastillas (Dosis):"
+                        android:textSize="14sp"
+                        android:textColor="#1C1C1E"
+                        android:layout_marginTop="12dp"/>
+
+                    <EditText
+                        android:id="@+id/inputDosisAlarma"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:hint="Ej. 2"
+                        android:inputType="number"
+                        android:background="@android:drawable/edit_text"
+                        android:textColor="#0d0c0c"
+                        android:paddingHorizontal="12dp"
+                        android:layout_marginTop="4dp"/>
+
+                    <Button
+                        android:id="@+id/btnGuardarAlarma"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="+ Guardar Alarma"
+                        android:layout_marginTop="8dp"
+                        android:backgroundTint="#1C1C1E"
+                        android:textColor="#FFFFFF" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="HORARIO DE HOY"
+                android:textSize="12sp"
+                android:textColor="#8E8E93"
+                android:textStyle="bold"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="24dp" />
+
+            <LinearLayout
+                android:id="@+id/contenedorHorario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="20dp"
+                android:layout_marginTop="8dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#FFFFFF"
+        android:orientation="horizontal"
+        android:elevation="10dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/navInicio"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Inicio"
+            android:gravity="center"
+            android:textColor="#1C1C1E"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/navBotiquin"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Botiquín"
+            android:gravity="center"
+            android:textColor="#8E8E93"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/navEscanear"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Escanear"
+            android:gravity="center"
+            android:textColor="#8E8E93"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
